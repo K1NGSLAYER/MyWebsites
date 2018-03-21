@@ -1,0 +1,419 @@
+/*--------------------------------------------------*/
+/*----------------BASIC SETUP-----------------------*/
+/*--------------------------------------------------*/
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+.clearfix {zoom:1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.row{
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+
+.box{
+  padding: 1%;
+
+}
+/*--------------------------------------------------*/
+/*----------------HEADER-----------------------*/
+/*--------------------------------------------------*/
+
+header{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.89)), url(images/hero.jpg);
+  height: 100vh;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*-------------------Header Text------------------*/
+h1,
+h2,
+h3{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #cbcbcb;
+  font-size: 240%;
+}
+
+h2{
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+
+}
+
+h2::before,
+h2::after{
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: "";
+  margin: 5px auto;
+  width: 100px;
+
+}
+
+h3{
+  font-size: 100%;
+  margin-bottom: 5px;
+  padding-left: 10px;
+
+}
+
+.heroText{
+  position: absolute;
+  width: 1140;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*----------------BUTTONS-----------------------*/
+/*--------------------------------------------------*/
+.button:link,
+.button:visited{
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 200px;
+  text-decoration: none;
+  font-weight: 300;
+  margin-right: 20px;
+  transition: background-color 0.4s, border 0.2s, color 0.4s;
+  margin-bottom: 10px;
+}
+
+.buttonFull:link,
+.buttonFull:visited{
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+}
+
+.buttonGhost:link,
+.buttonGhost:visited{
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+/*----------------Button Hover State-----------------------*/
+.buttonFull:hover,
+.buttonFull:active{
+  background-color: #924d10;
+  border: 1px solid #e67e22;
+}
+
+.buttonGhost:hover,
+.buttonGhost:active{
+  background-color: #924d10;
+  border: 1px solid #e67e22;
+  color: #fff;
+}
+
+.mainNav{
+  list-style: none;
+  float: right;
+  margin-top: 60px;
+}
+
+.mainNav li{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.mainNav li a:link,
+.mainNav li a:visited{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 1px solid transparent;
+  border-radius: 100px;
+  padding: 3px 2px;
+  transition: border-bottom 0.5s, color 0.5s;
+  font-weight: 300;
+}
+
+.mainNav li a:hover,
+.mainNav li a:active{
+  color:#e67e22;
+  border-bottom: 1px solid #e67e22;
+  border-radius: 100px;
+  padding: 3px 2px;
+}
+
+.logo{
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+/*--------------------------------------------------*/
+/*----------------SECTION-----------------------*/
+/*--------------------------------------------------*/
+.sectionFeatures{
+  margin: 60px 0px;
+}
+
+.box .icons{
+  display: block;
+  font-size: 250%;
+  text-align: center;
+  color: #e67e22;
+}
+
+.box p{
+  line-height: 140%;
+  font-size: 90%;
+  box-shadow: 1px 1px 2px hsl(0, 0%, 47%);
+  padding: 10px;
+  background-color: hsl(0, 0%, 99%);
+}
+
+/*----------------Paragraph-----------------------*/
+/*--------------------------------------------------*/
+.longCopy{
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.sectionFeatures .longCopy{
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+/*----------------Image Slideshow-----------------------*/
+/*--------------------------------------------------*/
+.mealsSection{
+  padding: 0;
+  margin: 0;
+}
+.mealsShowcase{
+  list-style: none;
+  width: 100%;
+}
+.mealsShowcase li{
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.mealsPhoto img{
+  opacity: 0.7;
+  width: 100%;
+  height:auto;
+  transform: scale(1.03);
+  transition: transform 0.4s, opacity 0.4s, filter 0.4s;
+  filter: grayscale(90%);
+}
+.mealsPhoto{
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+
+}
+.mealsPhoto img:hover{
+  transform: scale(1.2);
+  opacity: 1;
+  filter: grayscale(0%);
+}
+/*----------------How it Works-----------------------*/
+/*--------------------------------------------------*/
+
+.stepBox:first-child{
+  text-align:right;
+  padding-right:3%;
+  margin-top: 30px;
+
+}
+.stepBox:last-child{
+  padding-left: 3%;
+  margin-top:60px;
+}
+.appScreen{
+  width: 35%;
+}
+.workStep{
+  margin-bottom: 50px;
+  float: left;
+  margin-top: 10px;
+}
+.stepNumber{
+  color:#fff;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #e67e22;
+}
+.buttonApp img{
+  height:50px;
+  width: auto;
+  margin-right:10px;
+  transition: transform 0.4s;
+}
+
+.buttonApp img:hover{
+  transform: scale(1.1);
+}
+.stepsSection{
+  background-color: #e9e9e9;
+  padding-top: 60px;
+  margin-bottom: 20px;
+
+}
+.cityImg{
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 1px 2px hsl(0, 0%, 47%);
+  margin-bottom: 15px;
+}
+.CityIcons{
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color:#e67e22;
+  margin-right: 10px;
+}
+.cityFeatures {
+  margin-bottom: 5px;
+  transition:text-transform 0.4s;
+}
+.cityFeatures a:link,
+.cityFeatures a:visited{
+  text-decoration: none;
+  color: #e67e22;
+}
+.cityFeatures a:hover,
+.cityFeatures a:active{
+  text-decoration: none;
+  color: #e67e22;
+  font-size: 110%;
+}
+.citiesSection{
+  margin-bottom: 20px;
+}
+blockquote{
+  padding-right:2%;
+  text-align: left;
+  margin-right: 20px;
+  color: #cbcbcb;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.customerTestimonials h2{
+color:#cbcbcb;
+}
+
+cite{
+  display: block;
+  font-size: 90%;
+}
+cite img{
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+.customerTestimonials{
+  padding-top: 20px;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.89)), url(images/back-customers.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+blockquote:before{
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+/*----------------Start Eating Healthy Today-----------------------*/
+/*--------------------------------------------------*/
+.signUp{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+.planPrice{
+  font-size: 200%;
+  color:#e67e22;
+  font-weight: 100;
+  margin-bottom: 10px;
+  padding: 0;
+
+}
+.planPrice span{
+  font-size: 50%;
+  text-transform: lowercase;
+  font-weight: 400;
+
+}
+.mealPlan{
+  margin-bottom: 25px;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
+}
+.planFeatureList li{
+  list-style: none;
+  line-height: 145%;
+  margin-bottom: 15px;
+
+}
+.planFeatureList{
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 25px;
+}
+.featureCheck{
+  margin-right: 15px;
+  color:#e67e22;
+}
+.signUpButton{
+  text-align: center;
+}
+.planBox{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 2px 1px 4px hsl(0, 0%, 47%);
+}
